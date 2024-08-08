@@ -6,7 +6,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/sashabaranov/go-openai/jsonschema"
+	"github.com/FrainL/go-openai/jsonschema"
 )
 
 // Chat message role defined by the OpenAI API.
@@ -250,6 +250,7 @@ const (
 type Tool struct {
 	Type     ToolType            `json:"type"`
 	Function *FunctionDefinition `json:"function,omitempty"`
+	Strict   bool                `json:"strict,omitempty"`
 }
 
 type ToolChoice struct {
